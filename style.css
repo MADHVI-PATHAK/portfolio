@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+
+ img{
+     height: 15vw;
+     width: 25vw;
+     border: solid 2px rgb(226, 43, 150);
+     
+ }
+
+ .project{
+     display: grid;
+     grid-template-columns: repeat(2, 50%);
+     
+     justify-content: center;
+     place-items: center;
+    margin: 8rem auto;
+ }
+
+ h1{
+     font-size: 2.2rem;
+     text-transform: uppercase;
+     padding-bottom: 2rem;
+ }
+
+ .neonTextLight {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px rgb(226, 43, 211),
+        0 0 82px rgb(226, 43, 211),
+        0 0 92px rgb(226, 43, 171),
+        0 0 102px rgb(226, 43, 226),
+        0 0 151px rgb(226, 43, 211);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   margin-top: -1rem;
+   text-transform: uppercase;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+
+  }
+  .nav-links li {
+    padding: 0 3rem;
+    font-size: 1.1rem;
+
+  }
+  #logo {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: lighter;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+
+  .container{
+      background-color: black;
+      height: 100%;
+      overflow: hidden;
+  }
+
+  .neonText {
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+  }
+  
+
+  @keyframes flicker {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(226, 43, 150),
+        0 0 80px rgb(226, 43, 156),
+        0 0 90px rgb(226, 43, 150),
+        0 0 100px rgb(226, 43, 150),
+        0 0 150px rgb(226, 43, 150);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+ 
+
+  button{
+    border: solid 2px rgb(226, 43, 150);
+    color: crimson;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 10%;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  a{
+      text-decoration: none;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+   
+  }
+
+  .desc_4{
+      margin-right: 9rem;
+  }
+ 
+  .home{
+    font-size: 1.3rem;
+  }
+
+  @media only screen and (max-width: 440px) and (min-width: 300px){
+    
+  .project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+   img{
+     margin-bottom: 3rem;
+   }
+.nav-links{
+  margin-bottom: -11rem;
+  margin-left: -25rem;
+ margin-right: 1rem;
+}
+   .nav-links li{
+   padding: 0 2rem;
+   font-size: 11px;
+  
+   }
+   #logo{
+     margin-left: 6rem;
+   }
+
+   .home{
+     font-size: 1rem;
+   }
+   
+  }
+
+  @media screen and (max-width: 375px){
+ .nav-links{
+   margin-right: -4px;
+ }
+ .neonText{
+   font-size: 2rem;
+ }
+ .h3{
+   font-size: 1.5rem;
+ }
+ .desc_4{
+   margin: auto 0;;
+ }
+
+ #logo{
+   margin: 2rem 4rem;
+   margin-bottom: -1rem;
+ }
+  }

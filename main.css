@@ -1,0 +1,303 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  main {
+    font-family: "Heebo", sans-serif;
+    overflow: hidden;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: 57rem;
+  }
+  .nav-links li {
+    padding: 0 3rem;
+    font-size: 1.1rem;
+
+  }
+  #logo {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    text-transform: uppercase;
+  }
+  .intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider {
+    background: hsl(263, 43%, 25%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+  }
+  
+  .intro-text {
+    color: blueviolet;
+    font-family: "Heebo", sans-serif;
+    font-size: 3rem;
+  }
+  
+  .hide {
+    background: black;
+    overflow: hidden;
+  }
+  
+  .hide span {
+    transform: translateY(100%);
+    display: inline-block;
+  }
+  
+  .landing{
+    height: 100vh;
+    background-color: black;
+    position: relative;
+  }
+
+  .neonText {
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+  }
+  
+  h1 {
+    font-size: 10.2rem;    
+  
+  }
+  
+  /* Flickering animation */
+  @keyframes flicker {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px blueviolet,
+        0 0 80px blueviolet,
+        0 0 90px blueviolet,
+        0 0 100px blueviolet,
+        0 0 150px blueviolet;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+
+  .neonTextLight {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px blueviolet,
+        0 0 82px blueviolet,
+        0 0 92px blueviolet,
+        0 0 102px blueviolet,
+        0 0 151px blueviolet;
+  }
+  
+  h2{
+      color: blueviolet;
+      font-size: 2rem;
+      text-transform: uppercase;
+  }
+  .wrap{
+      display: flex;
+      justify-content: space-around;
+      width: 90%;
+      align-items: center;
+      padding-top: 8rem;
+  }
+
+  .typing{
+      position: relative;
+      margin-left: 1rem;
+  }
+ /* .typing::after{
+     content: "";
+     width: 5rem;
+     height: 3rem;
+     border-right: 4px solid blueviolet;
+     position: absolute;
+     right: 11px;
+     animation: type 0.5s infinite ease ;
+ }
+
+ @keyframes type{
+     0%{
+         opacity: 0;
+     }
+     100%{
+         opacity: 1;
+     }
+ } */
+
+ .t{
+     margin-left: 1rem;
+ }
+  
+ .slide-in{
+     animation: slide-in 0.5s ease forwards;
+ } 
+
+ @keyframes slide-in {
+     from{
+         transform: translateX(100%);
+         visibility: visible;
+     }
+     to{
+         transform: translateX(0%);
+     }
+ }
+
+
+ @media screen and (min-width: 1024px) {
+  .intro{
+    position: fixed;
+    top: -1.5rem;
+  }
+
+ .nav-links{
+   margin-left: -9rem;
+ }
+.intro-text{
+  font-size: 3rem;
+}
+  
+}
+
+ @media screen and (max-width: 1024px) and (min-width: 768px) {
+  .intro{
+    position: fixed;
+    top: -10rem;
+  }
+
+  .intro-text{
+    font-size: 2rem;
+  }
+
+ .nav-links{
+   margin-right: 1rem;
+ }
+
+  .row{
+    margin-top: -5rem;
+    margin-left: 2rem;
+  }
+  
+}
+
+ 
+ @media screen and (max-width: 768px) and (min-width: 425px) {
+  .intro{
+    position: fixed;
+    top: -10rem;
+  }
+
+ .wrap{
+   display: flex;
+   flex-direction: column;
+  
+   width: 100vw;
+   background-color: black;
+ }
+
+ main{
+   height: 100%;
+ }
+ .landing{
+   height: 100%;
+   
+ }
+
+ .row{
+   margin-top: 6rem;
+   margin-bottom: 3rem;
+ }
+
+
+.nav-links{
+  margin-left: -12rem;
+ 
+}
+ 
+  .nav-links li{
+    padding: 0 1rem;
+  }
+ 
+}
+
+@media only screen and (max-width: 440px) and (min-width: 300px){
+  .intro-text {
+    font-size: 1rem;
+  }
+
+ .nav-links{
+   display: flex;
+   flex-direction: column;
+   margin-right: 1rem;
+ }
+
+ #logo{
+   margin-top: -1rem;
+ }
+ 
+}
+
+@media screen and (max-width: 380px){
+  .intro-text{
+    font-size: 5px;
+  }
+
+  .intro{
+    margin-top: -10rem;
+    font-size: 10px;
+  }
+
+  .wrap{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links{
+    margin-left: 0;
+  }
+  .nav-links li{
+    font-size: 11px;
+  }
+
+ .neonText{
+   font-size: 5rem;
+ }
+  h2{
+    font-size: 1rem;
+   
+  }
+  .row{
+    margin-top: 6rem;
+  }
+}
+
